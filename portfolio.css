@@ -202,7 +202,7 @@ footer {
     padding: 10px;
     padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
     height: 400px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
-    background-color: #f2f2f2; /* Sets the background color of the columns with class Column_1 */
+    background-color: #ffffff; /* Sets the background color of the columns with class Column_1 */
 }
 
 /* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
@@ -241,37 +241,37 @@ input[type=text],
 input[type=email],
 textarea {
     width: 60%; /* Make input boxes narrower for centering */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-    font-family: Perpetua, Rockwell Extra Bold;
+    display: block; /* Allows centering of input boxes */
+    margin-left: auto; /* In combination with "margin-right: auto" this will center the input boxes */
+    margin-right: auto; /* In combination with "margin-left: auto" this will center the input boxes */
+    padding: 12px; /* Adds padding inside the input boxes */
+    border: 1px solid #ccc; /* Light gray border for input boxes */
+    border-radius: 4px; /* Rounded corners for input boxes */
+    box-sizing: border-box; /* Ensures padding and border are included in the total width and height */
+    margin-top: 6px; /* Adds margin above input boxes */
+    margin-bottom: 16px; /* Adds margin below input boxes */
+    resize: vertical; /* Allows users to resize textareas vertically */
+    font-family: Perpetua, Rockwell Extra Bold; /* Sets font family for input boxes */
 }
 
 button {
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    display: block;
-    margin: auto;
-    font-family: Perpetua, Rockwell Extra Bold;
+    background-color: black; /* Sets the background color of the button to black */
+    color: white; /* Sets the font color of the button to white */
+    font-weight: bold; /* Makes the font of the button bold */
+    padding: 12px 20px; /* Adds padding to the button */
+    border: none; /* Removes the border from the button */
+    border-radius: 4px; /* Gives the button rounded corners */
+    cursor: pointer; /* Changes the cursor to pointer when over the button */
+    display: block; /* Allows the button to be centered */
+    margin: auto; /* In combination with "display: block" this will center the button */
+    font-family: Perpetua, Rockwell Extra Bold; /* Sets font family for the button */
 }
 
 button:hover {
-    background-color: white;
-    color: black;
-    transform: scale(1.2);
-    transition: transform 1s;
+    background-color: white; /* Turns the background of the button white when the user hovers over it */
+    color: black; /* Turns the font black when hovered over */
+    transform: scale(1.2); /* Makes the button increase 1.2 times in size */
+    transition: transform 1s; /* Makes the transform effect last 1 second */
 }
 /* Hover effects for input boxes */
 input[type=text]:hover {
