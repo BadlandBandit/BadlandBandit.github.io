@@ -236,8 +236,9 @@ footer {
 /***** END OF TABLE STYLING *****/
 
 /***** CONTACT FORM STYLING *****/
-/* input[type=text] targets all text input sections of the contact form */
-input[type=email], {
+/* input[type=text] and input[type=email] target all text and email input sections of the contact form */
+input[type=text],
+input[type=email] {
     width: 100%; /* Each input box covers the full width of the container */
     padding: 12px; /* Adds padding within the text box */
     border: 1px solid #ccc; /* Setting a solid border and its color */
