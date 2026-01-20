@@ -1,7 +1,7 @@
 /***** GENERAL STYLING *****/
 /* Body */
 body {
-    margin: 0%  /* This ensures our site displays all the way to the edge of the browser screen */
+    margin: 0%; /* This ensures our site displays all the way to the edge of the browser screen */
 }
 
 /* Heading 1 elements */
@@ -237,7 +237,7 @@ footer {
 
 /***** CONTACT FORM STYLING *****/
 /* input[type=text] targets all text input sections of the contact form */
-input[type=text] {
+input[type=email], {
     width: 100%; /* Each input box covers the full width of the container */
     padding: 12px; /* Adds padding within the text box */
     border: 1px solid #ccc; /* Setting a solid border and its color */
@@ -249,6 +249,25 @@ input[type=text] {
     font-family: Perpetua, Rockwell Extra Bold;
 }
 
+button {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    font-family: Perpetua, Rockwell Extra Bold;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.2);
+    transition: transform 1s;
+}
 /* Hover effects for input boxes */
 input[type=text]:hover {
     box-shadow: 0 0 5px #02f05d inset; /* This creates a blue shadow in the text box when hovered over by the user */
