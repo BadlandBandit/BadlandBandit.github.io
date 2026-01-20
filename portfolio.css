@@ -238,15 +238,19 @@ footer {
 /***** CONTACT FORM STYLING *****/
 /* input[type=text] and input[type=email] target all text and email input sections of the contact form */
 input[type=text],
-input[type=email] {
-    width: 100%; /* Each input box covers the full width of the container */
-    padding: 12px; /* Adds padding within the text box */
-    border: 1px solid #ccc; /* Setting a solid border and its color */
-    border-radius: 4px; /* Slightly rounds the corners of the text box border */
-    box-sizing: border-box; /* This creates a box with a border around the contact form input boxes */
-    margin-top: 6px; /* Adds a margin to the top of the text box */
-    margin-bottom: 16px; /* Adds a margin to the bottom of the text box */
-    resize: vertical; /* This allows the user to resize the text boxes vertically */
+input[type=email],
+textarea {
+    width: 60%; /* Make input boxes narrower for centering */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
     font-family: Perpetua, Rockwell Extra Bold;
 }
 
