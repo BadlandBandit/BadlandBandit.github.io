@@ -2,6 +2,17 @@
 /* Body */
 body {
     margin: 0; /* This ensures our site displays all the way to the edge of the browser screen */
+    opacity: 1; /* This sets the opacity of the body to 1, meaning it is fully opaque and not transparent at all */
+    transition: opacity 3s; /* This makes any changes to the opacity of the body take 3 seconds to occur, creating a fade effect */
+    letter-spacing: .2vw; /* This adds spacing between letters that is equal to 0.2% of the viewport width */
+    font-family: avant Garde, Helvetica; /* This sets the font family for the body of our page */
+    font-size: 1.5vw; /* This sets the font size for the body of our page to 1.5% of the viewport width */ 
+    overflow-x: hidden; /* This prevents a horizontal scroll bar from appearing when the video is displayed across the full width of the page */
+    user-select: none; /* This prevents users from being able to select text on the page, which is important for the video background */
+}
+
+body.fade-out {
+    opacity: 1; /* This keeps the body fully opaque when the fade-out class is applied, allowing us to control when the fade effect occurs with JavaScript */
 }
 
 /* Heading 1 elements */
@@ -191,16 +202,128 @@ footer {
 }
 /***** END OF VIDEO STYLING *****/
 
+/***** Slideshow Styling *****/
+#Slideshow_Background {
+    background: rgba(255, 255, 255, 0.35); /* This creates a slightly transparent white background that's palced over the video in the background */    
+}
+
+.mySlides{
+    display: none; /* This prevents the images from being displayed, we will use JS to display these */
+}
+
+/* Slideshow section / container */
+#Slideshow_Container {
+    width: 39.5vw; /* Relative sizing of the container for the slidewshow set to 39.5% of the viewport width */
+    height: auto; /* The height of the container is automatically adjusted based on the content it is displaying */
+    padding-top: 4%; /* Adds a small padding to the top of the slideshow container */
+    position: relative; /* This sets the container relative to its normal positioning */
+    margin:auto; /* This will horizontally center the container on the page */
+}
+
+/* Remove the underline from the previous and next buttons on the slideshow */
+#Slideshow_Container a {
+    text-decoration: none;
+}
+
+/* Images contained within the slideshow */
+.Slideshow_Images {
+    vertical-align: middle; /* This centers the images vertically within the slideshow container */
+    height: auto; /* The height of the images is automatically adjusted based on the content, ie if your images are different sizes, they will display as different sizes */
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75); /* Adds a shadow around the slideshow images */
+    width: 100%; /* The width of the images is automatically adjusted based on the content */
+}
+
+/* Next and previous buttons */
+.Previous, .Next {
+    cursor: pointer; /* Changes the mouse to a pointer when the buttons are selected */
+    position: absolute; /* This makes the next and previous buttons positioned relative to the slideshow container */
+    top: 50%; /* This moves the buttons up in the slideshow container */
+    width: auto; /* The width of the buttons is automatically adjusted based on the content */
+    padding: 2vw; /* Adds padding equal to 2% of the viewport width */
+    color: darkgray; 
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 0 3px 3px 0; /* Adds a slightly rounded border on the top and bottom right corners */
+    user-select: none; /* This property makes it so that the user cannot highlight the text */
+    transition: 0.6s ease; /* This specifies the details of the hover transition for these elements */
+}
+
+/* Positioning the next button on the right hand side */
+.Next {
+    right: 0; /* This moves the next button to the right side of the slideshow container */
+    border-radius: 3px 0 0 3px; /* This changes the border radius on the next button to the top and bottom left of the button */
+}
+
+/* Hover effect on slide show buttons */
+.Previous:hover, .Next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Makes the background of the arrows a transparent gray color */
+    color: white; /* Makes the arrows white when hovered over */
+}
+
+/* Slideshow text */
+.text {
+    color: white; 
+    padding: 1vw;
+    position: absolute; /* This ensures the text is positioned within the image */
+    bottom: 0; /* This property sets the text at the bottom of the image */
+    width: 100%; /* The element covers the full width of the image */
+    text-align: center; /* The text is center aligned within the image */
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw; /* This gives slight spacing between the letters */
+    font-size: 1.5vw; /* Font size is relative to the size of the viewport width */
+    background-color: rgba(0, 0, 0, 0.75); /* Gives a slightly transparent black background */
+    font-weight: bold;
+    border-radius: 0px 0px 7px 7px; /* Gives the text background rounded corners on the bottom left and right corners */
+}
+
+/* Styling of the dots under the slideshow */
+.dot {
+    cursor: pointer; /* The cursor changes to pointer when hovered over the dots */
+    height: 1vw; /* The dots are sized relative to the viewport width */
+    width: 1vw;
+    margin: .25vw; /* adds additional spacing between the dots */ 
+    background-color: white; /* Makes the dots white */
+    border-radius: 50%; /* Makes the dots circles by rounding each corner */
+    display: inline-block; /* Allows the dots to sit next to eachother rather than on a new line */
+    transition: background-color 0.6s ease; /* When clicked on the dots transition to a different color when clicked or hovered over (the affect is defined below) */
+    z-index: 1; /* This ensures the dots will be displayed above any other elements */
+}
+
+/* Hover effect for slideshow dots */
+.active, .dot:hover {
+    background-color: black; /* Sets the color of the dots when active or hovered over */
+}
+
+/* Fading animation for slideshow */
+.fade {
+    animation-name: fade; /* Fade animation is defined below */
+    animation-duration: 1.5s; /* The animation lasts 1.5 seconds */
+    -webkit-animation-name: fade; /* Same as above for Safari 4.0-8.0 */
+    -webkit-animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4;} /* Image starts transparent */
+    to {opacity: 1;} /* Image ends opaque */
+}
+
+@keyframes fade {
+    from {opacity: .4;} /* Image starts transparent */
+    to {opacity: 1;} /* Image ends opaque */
+}
+/***** End Slideshow Styling *****/
+
 /***** TABLE STYLING -  this section covers the styling of the columns and rows within the table *****/
 * { /* The asterisk is a universal selector that applies this effect to all elements on the page */
     box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
 } 
 
 .Column_1 {
+    text-align: center; /* This centers the text within the columns with class Column_1 */
     float: left;
     width: 50%; /* This ensures the column takes up half of the page width */
     padding: 10px;
-    padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
+    padding-top: 1%; /* This ensures there is space between the top of the column and our headings */
     height: 400px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
     background-color: #f2f2f2; /* Sets the background color of the columns with class Column_1 */
 }
@@ -223,7 +346,7 @@ footer {
 
 /* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
 .Column_tall {
-    padding-top: 3.5%;
+    padding-top: 1%;
     height: 450px;
 }
 
@@ -239,19 +362,20 @@ footer {
 /* input[type=text] and input[type=email] target all text and email input sections of the contact form */
 input[type=text],
 input[type=email] {
-    width: 50%; /* Each input box covers the full width of the container */
+    text-align: left; /* This left aligns the text within the text and email input boxes */
+    width: 50%; /* This sets the width of the text and email input boxes to 50% of the width of their container */
     padding: 12px; /* Adds padding within the text box */
     border: 1px solid #ccc; /* Setting a solid border and its color */
     border-radius: 4px; /* Slightly rounds the corners of the text box border */
     box-sizing: border-box; /* This creates a box with a border around the contact form input boxes */
-    margin-top: 6px; /* Adds a margin to the top of the text box */
+    margin-top: 2px; /* Adds a margin to the top of the text box */
     margin-bottom: 16px; /* Adds a margin to the bottom of the text box */
     resize: vertical; /* This allows the user to resize the text boxes vertically */
     font-family: Perpetua, Rockwell Extra Bold;
 }
 
 button {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: white;
     font-weight: bold;
     padding: 12px 20px;
@@ -260,6 +384,7 @@ button {
     cursor: pointer;
     display: block;
     margin: auto;
+    margin-top: 15px;
     font-family: Perpetua, Rockwell Extra Bold;
 }
 
@@ -276,7 +401,7 @@ input[type=text]:hover {
 
 /* Submit button */
 input[type=submit] {
-    background-color: black; /* Sets the background color of the submit button to black */
+    background-color: #000000; /* Sets the background color of the submit button to black */
     color: white; /* Sets the font color of the Submit button to white */
     font-weight: bold; /* Makes the font of the submit button bold */
     padding: 12px 20px; /* Adds padding to the submit button */
@@ -299,6 +424,7 @@ input[type=submit]:hover {
 
 /* Form element */
 form {
+    text-align: left; /* This left aligns the text within the form */
     width: 100%; /* This ensures the form fills the width of its container */
     padding: 20px; /* This adds padding around the form */
     font-family: Perpetua, Rockwell Extra Bold;
