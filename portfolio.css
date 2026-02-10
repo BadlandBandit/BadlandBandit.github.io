@@ -9,16 +9,8 @@ h1 {
     text-transform: uppercase; /* Capitalizing all h1 headings */
     font-family: "Trebuchet MS", Optima; /* Sets the font family of all h1 headings */
     text-align: center; /* Centering all h1 elements */
+    margin-top: 0%; /* Adds a small margin above h1 elements */
     color: #1a1a1a; 
-}
-
-/* Center content in About column */
-.centered-about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
 }
 
 /* Heading 1 element hover effect */
@@ -210,7 +202,7 @@ footer {
     padding: 10px;
     padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
     height: 400px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
-    background-color: #ffffff; /* Sets the background color of the columns with class Column_1 */
+    background-color: #f2f2f2; /* Sets the background color of the columns with class Column_1 */
 }
 
 /* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
@@ -246,40 +238,36 @@ footer {
 /***** CONTACT FORM STYLING *****/
 /* input[type=text] and input[type=email] target all text and email input sections of the contact form */
 input[type=text],
-input[type=email],
-textarea {
-    width: 60%; /* Make input boxes narrower for centering */
-    display: block; /* Allows centering of input boxes */
-    margin-left: auto; /* In combination with "margin-right: auto" this will center the input boxes */
-    margin-right: auto; /* In combination with "margin-left: auto" this will center the input boxes */
-    padding: 12px; /* Adds padding inside the input boxes */
-    border: 1px solid #ccc; /* Light gray border for input boxes */
-    border-radius: 4px; /* Rounded corners for input boxes */
-    box-sizing: border-box; /* Ensures padding and border are included in the total width and height */
-    margin-top: 6px; /* Adds margin above input boxes */
-    margin-bottom: 16px; /* Adds margin below input boxes */
-    resize: vertical; /* Allows users to resize textareas vertically */
-    font-family: Perpetua, Rockwell Extra Bold; /* Sets font family for input boxes */
+input[type=email] {
+    width: 50%; /* Each input box covers the full width of the container */
+    padding: 12px; /* Adds padding within the text box */
+    border: 1px solid #ccc; /* Setting a solid border and its color */
+    border-radius: 4px; /* Slightly rounds the corners of the text box border */
+    box-sizing: border-box; /* This creates a box with a border around the contact form input boxes */
+    margin-top: 6px; /* Adds a margin to the top of the text box */
+    margin-bottom: 16px; /* Adds a margin to the bottom of the text box */
+    resize: vertical; /* This allows the user to resize the text boxes vertically */
+    font-family: Perpetua, Rockwell Extra Bold;
 }
 
 button {
-    background-color: black; /* Sets the background color of the button to black */
-    color: white; /* Sets the font color of the button to white */
-    font-weight: bold; /* Makes the font of the button bold */
-    padding: 12px 20px; /* Adds padding to the button */
-    border: none; /* Removes the border from the button */
-    border-radius: 4px; /* Gives the button rounded corners */
-    cursor: pointer; /* Changes the cursor to pointer when over the button */
-    display: block; /* Allows the button to be centered */
-    margin: auto; /* In combination with "display: block" this will center the button */
-    font-family: Perpetua, Rockwell Extra Bold; /* Sets font family for the button */
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    font-family: Perpetua, Rockwell Extra Bold;
 }
 
 button:hover {
-    background-color: white; /* Turns the background of the button white when the user hovers over it */
-    color: black; /* Turns the font black when hovered over */
-    transform: scale(1.2); /* Makes the button increase 1.2 times in size */
-    transition: transform 1s; /* Makes the transform effect last 1 second */
+    background-color: white;
+    color: black;
+    transform: scale(1.2);
+    transition: transform 1s;
 }
 /* Hover effects for input boxes */
 input[type=text]:hover {
@@ -311,19 +299,9 @@ input[type=submit]:hover {
 
 /* Form element */
 form {
-    border-radius: 5px; /* Rounds the corners of the contact form */
-    background-color: #f2f2f2; 
-    padding: 10px; /* Adds padding to the contact form */
-    font-family: "Trebuchet MS", Optima;
+    width: 100%; /* This ensures the form fills the width of its container */
+    padding: 20px; /* This adds padding around the form */
+    font-family: Perpetua, Rockwell Extra Bold;
+
 }
-
-/* Center Labels Above Input Fields */
-form label {
-    display: block; /* Makes labels block elements */
-    text-align: center; /* Centers the labels */
-    margin-bottom: 8px;
-    font-family: perpetua, Rockwell Extra Bold;
-}
-
-
 /***** END OF CONTACT FORM STYLING *****/

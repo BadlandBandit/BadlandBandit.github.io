@@ -26,7 +26,7 @@
     <!--Background video-->
     <div id="Home">
       <video autoplay muted loop id="Typing_Video">
-        <source src="images/video/Typing.mp4" type="video/mp4" />
+        <source src="https://www.pexels.com/download/video/32522782/" type="video/mp4" />
         Your browser does not support HTML5 video.
       </video>
     </div>
@@ -66,28 +66,26 @@
 
       <!--Right column-->
       <div class="Column_1">
-        <div class="centered-about">
-          <h1>About</h1>
-          <p>
-            I’m a software developer who genuinely enjoys building things that make life easier —
-            whether that’s a small tool, a full web app, or a clean backend that just works.
-            <br /><br />
+        <h1>About</h1>
+        <p>
+          I’m a software developer who genuinely enjoys building things that make life easier —
+          whether that’s a small tool, a full web app, or a clean backend that just works.
+          <br /><br />
 
-            I graduated from
-            <a href="https://www.learncodinganywhere.com" target="_blank" rel="noopener noreferrer">
-              The Tech Academy
-            </a>
-            Software Developer Boot Camp and I’ve trained in HTML, CSS, JavaScript, SQL, C# and more.
-            <br /><br />
+          I graduated from
+          <a href="https://www.learncodinganywhere.com" target="_blank" rel="noopener noreferrer">
+            The Tech Academy
+          </a>
+          Software Developer Boot Camp and I’ve trained in HTML, CSS, JavaScript, SQL, C# and more.
+          <br /><br />
 
-            I’m especially interested in full-stack development and I’m always sharpening my skills:
-            cleaner code, better UI, stronger architecture, and shipping projects that feel polished.
-            <br /><br />
+          I’m especially interested in full-stack development and I’m always sharpening my skills:
+          cleaner code, better UI, stronger architecture, and shipping projects that feel polished.
+          <br /><br />
 
-            If you’re looking for someone who communicates clearly and takes pride in the details,
-            <a href="#Contact">reach out</a> — I’d love to hear what you’re working on.
-          </p>
-        </div>
+          If you’re looking for someone who communicates clearly and takes pride in the details,
+          <a href="#Contact">reach out</a> — I’d love to hear what you’re working on.
+        </p>
       </div>
     </div>
 
@@ -123,33 +121,33 @@
     <div class="Row" id="Contact">
       <!--Contact image, left column-->
       <div class="Column_2 Column_tall">
-        <img
-          src="https://www.freepnglogos.com/uploads/email-png/download-blue-email-png-png-image-pngimg-10.png"
-          alt="Email icon"
-        />
+      <img
+        src="https://www.freepnglogos.com/uploads/email-png/download-blue-email-png-png-image-pngimg-10.png"
+        alt="Email icon"
+      />
       </div>
 
       <!--Contact form, right column-->
       <div class="Column_1 Column_tall">
-        <h1>Contact</h1>
-        <p>
-          If you want to collaborate, have a question, or just want to connect, send me a message
-          here:
-        </p>
+      <h1>Contact</h1>
+      <p>
+        If you want to collaborate, have a question, or just want to connect, send me a message
+        here:
+      </p>
 
-        <form action="https://formspree.io/f/xgoolyga" method="POST">
-          <label>
-            Your email
-            <input type="email" name="email" required />
-          </label>
+      <form action="https://formspree.io/f/xgoolyga" method="POST" name="contact-form">
+        <div class="form-group">
+        <label for="email">Your email:</label>
+        <input type="email" id="email" name="email" required />
+        </div>
 
-          <label>
-            Your message
-            <textarea name="message" rows="6" required></textarea>
-          </label>
+        <div class="form-group">
+        <label for="message">Your message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
 
-          <button type="submit">Send</button>
-        </form>
+        <button type="submit" class="submit-btn">Send</button>
+      </form>
       </div>
     </div>
 
